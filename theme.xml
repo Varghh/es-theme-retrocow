@@ -58,7 +58,7 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
       <color>1B1038</color>
       <cornerSize>52 52</cornerSize>
       <path>./assets/frame.png</path>
-      </menuBackground>
+    </menuBackground>
   </view>
 
   <view name="system">
@@ -78,11 +78,10 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
       <path>./art/${system.theme}.svg</path>
       <path>./art/${system.theme}.png</path>
       <reflexion>0 0</reflexion>
-      <!-- <verticalAlignment>bottom</verticalAlignment> -->
       <reflexionOnFrame>true</reflexionOnFrame>
     </image>
     <text name="logoText">
-    <fontPath>./assets/miss.ttf</fontPath>
+      <fontPath>./assets/miss.ttf</fontPath>
       <fontSize>0.092</fontSize>
       <color>FFFFFFFF</color>
       <reflexion>0 0</reflexion>
@@ -114,7 +113,8 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
       <textColor>FFFFFF90</textColor>
       <iconColor>FFFFFF90</iconColor>
     </helpsystem>
-    <image name="background" extra="true">
+    <!-- Built-in background: do not create a second full-screen extra. -->
+    <image name="background">
       <size>1 1</size>
       <pos>0 0</pos>
       <origin>0 0</origin>

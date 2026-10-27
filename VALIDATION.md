@@ -28,6 +28,15 @@ Se compiló Batocera EmulationStation **v42**, revisión `47fa539ad338020bab5e9e
 
 Esto valida carga y presentación en ese frontend de escritorio. **No valida rendimiento en la PC de destino, reproducción de clips, audio, mandos físicos ni retorno desde emuladores reales.** Las capturas usan la mascota como carátula de prueba; las carátulas reales dependen de la biblioteca del usuario.
 
+## Revisión del paquete instalable
+
+- Se generó y extrajo un ZIP desde el árbol Git preparado para el PR. Los **147 archivos** del paquete coinciden con los archivos versionados; `theme.xml` queda directamente en la raíz de `es-theme-retrocow/`, junto con `art/` y `assets/`.
+- La mascota está incluida en `assets/branding/retrocow-mascot.png`: PNG RGBA de 256×229 con transparencia real, idéntico al de RetroCow/Pegasus. Pixelify Sans, su licencia, las fuentes originales y el fondo están incluidos; no requieren instalación ni descarga adicional.
+- Las rutas de los XML se resuelven dentro de la carpeta extraída o a recursos internos del frontend. Los 130 SVG se analizan correctamente y no contienen referencias `href` a archivos externos. El paquete no contiene enlaces simbólicos, archivos Git LFS, submódulos, cachés ni herramientas de compilación o prueba.
+- Se cargó **la copia extraída**, en lugar del checkout de desarrollo, en el frontend real: basic y grid a 1280×720 y detailed a 800×600. Se verificaron carrusel, marca, navegación, menú y fallback de carátula/descripcion. Sin errores de análisis ni propiedades desconocidas del tema en esos logs.
+- Se retiró `extra="true"` del fondo estándar en ambos XML: EmulationStation ya crea ese componente y el atributo provocaba otro fondo de pantalla completa. Se mantiene Abstract con la misma ruta, tinte y posición. No se alteraron las imágenes ni las fuentes durante esta revisión.
+- El README explica la descarga de `master` **después del merge**, la extracción y el nombre final de la carpeta, y destaca la autoría original de lilbud, crcerror y colaboradores. Su texto histórico permanece íntegro.
+
 ## Tamaño y rendimiento
 
 El contenido original versionado ocupa **7.233.980 bytes** (sin `.git`). La adaptación ocupa aproximadamente **2,67 MB**, documentación incluida: alrededor de **63 % menos**. Esto mide archivos distribuidos, no RAM ni FPS.

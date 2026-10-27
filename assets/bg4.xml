@@ -16,7 +16,7 @@ RetroCow: vaporwave recolor, 1280x720 indexed PNG. Original layout and credits r
     </image>
   </view>
   <view name="video, basic, detailed, grid">
-    <image name="background" extra="true">
+    <image name="background">
       <path>./bg4.png</path>
       <color>808080</color>
     </image>
