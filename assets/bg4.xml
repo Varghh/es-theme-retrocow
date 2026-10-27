@@ -4,6 +4,7 @@ Asset 4: Abstract
 Maintained: 2021+ crcerror, thx @fabricecaruso for the style assets
 Dedicated to Viktoria
 License: creative commons CC-BY-NC-SA
+RetroCow: vaporwave recolor, 1280x720 indexed PNG. Original layout and credits retained.
 -->
 
 <theme>
@@ -11,13 +12,13 @@ License: creative commons CC-BY-NC-SA
   <view name="system">
     <image name="staticBackground">
       <path>./bg4.png</path>
-      <color>10667f</color>
+      <color>808080</color>
     </image>
   </view>
   <view name="video, basic, detailed, grid">
-    <image name="background" extra="true">
+    <image name="background">
       <path>./bg4.png</path>
-      <color>10667f</color>
+      <color>808080</color>
     </image>
   </view>
 </theme>

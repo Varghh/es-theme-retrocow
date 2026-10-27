@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-Theme: Minimal
+Theme: RetroCow, a personal adaptation of Minimal
 Original author: Lilbud
 Maintained: 2021+ crcerror, thx @fabricecaruso for the style assets
 Updated: On 14.02.2026
 License: creative commons CC-BY-NC-SA
+RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDITS.md
 -->
 <theme defaultView="detailed">
   <formatVersion>7</formatVersion>
@@ -12,9 +13,8 @@ License: creative commons CC-BY-NC-SA
     <text name="clock">
       <pos>0.92 0.95</pos>
       <size>0.07 0.025</size>
-      <fontSize>0.025</fontSize>
       <color>FFFFFFC0</color>
-      <horizontalAlignment>center</horizontalAlignment>
+      <alignment>center</alignment>
       <verticalAlignment>center</verticalAlignment>
       <fontPath>./assets/SST.ttf</fontPath>
       <fontSize>0.04</fontSize>
@@ -26,8 +26,8 @@ License: creative commons CC-BY-NC-SA
       <itemSpacing>0.003</itemSpacing>
       <imagePath>./assets/gamepad.svg</imagePath>
       <color>FFFFFF80</color>
-      <activityColor>A0A0FFC0</activityColor>
-      <hotkeyColor>FFA0A0C0</hotkeyColor>
+      <activityColor>7DF9FFC0</activityColor>
+      <hotkeyColor>FF71CEC0</hotkeyColor>
     </controllerActivity>
   </view>
 
@@ -35,7 +35,7 @@ License: creative commons CC-BY-NC-SA
     <menuText name="menutitle">
       <fontPath>./assets/noto.ttf</fontPath>
       <fontSize>0.044</fontSize>
-      <color>ffffff</color>
+      <color>F5EFFF</color>
     </menuText>
     <menuText name="menufooter">
       <fontPath>./assets/SST.ttf</fontPath>
@@ -44,21 +44,21 @@ License: creative commons CC-BY-NC-SA
     <menuText name="menutext">
       <fontPath>./assets/SST.ttf</fontPath>
       <fontSize>0.025</fontSize>
-      <color>A6C6D1</color>
-      <selectorColor>0F85A5</selectorColor>
-      <selectorColorEnd>0F6585</selectorColorEnd>
-      <selectedColor>ffffff</selectedColor>
-      <separatorColor>0C3F53</separatorColor>
+      <color>C1B3DC</color>
+      <selectorColor>291747</selectorColor>
+      <selectorColorEnd>1B1038</selectorColorEnd>
+      <selectedColor>7DF9FF</selectedColor>
+      <separatorColor>553EA8</separatorColor>
     </menuText>
     <menuTextSmall name="menutextsmall">
       <fontPath>./assets/SST.ttf</fontPath>
       <fontSize>0.02</fontSize>
     </menuTextSmall>
     <menuBackground name="menubg">
-      <color>0A354A</color>
+      <color>1B1038</color>
       <cornerSize>52 52</cornerSize>
       <path>./assets/frame.png</path>
-      </menuBackground>
+    </menuBackground>
   </view>
 
   <view name="system">
@@ -68,9 +68,7 @@ License: creative commons CC-BY-NC-SA
       <origin>0 0</origin>
       <tile>false</tile>
       <linearSmooth>true</linearSmooth>
-      <path>./assets/bg.png</path>
       <zIndex>0</zIndex>
-      <color>10667f</color>
     </image>
     <helpsystem name="help">
       <textColor>FFFFFF90</textColor>
@@ -79,15 +77,14 @@ License: creative commons CC-BY-NC-SA
     <image name="logo">
       <path>./art/${system.theme}.svg</path>
       <path>./art/${system.theme}.png</path>
-      <reflexion>0.16 0.0</reflexion>
-      <!-- <verticalAlignment>bottom</verticalAlignment> -->
+      <reflexion>0 0</reflexion>
       <reflexionOnFrame>true</reflexionOnFrame>
     </image>
     <text name="logoText">
-    <fontPath>./assets/miss.ttf</fontPath>
+      <fontPath>./assets/miss.ttf</fontPath>
       <fontSize>0.092</fontSize>
       <color>FFFFFFFF</color>
-      <reflexion>0.16 0.0</reflexion>
+      <reflexion>0 0</reflexion>
       <reflexionOnFrame>true</reflexionOnFrame>
     </text>
 
@@ -116,13 +113,12 @@ License: creative commons CC-BY-NC-SA
       <textColor>FFFFFF90</textColor>
       <iconColor>FFFFFF90</iconColor>
     </helpsystem>
-    <image name="background" extra="true">
+    <!-- Built-in background: do not create a second full-screen extra. -->
+    <image name="background">
       <size>1 1</size>
       <pos>0 0</pos>
       <origin>0 0</origin>
-      <path>./assets/bg.png</path>
       <zIndex>0</zIndex>
-      <color>10667f</color>
     </image>
     <image name="backgroundx" extra="true">
       <size>1 1</size>
@@ -130,7 +126,7 @@ License: creative commons CC-BY-NC-SA
       <origin>0 0</origin>
       <path>./assets/gamelist.png</path>
       <zIndex>0</zIndex>
-      <color>FFFFFFFF</color>
+      <color>553EA8FF</color>
     </image>
     <text name="system_name" extra="true">
       <text>${system.fullName}</text>
@@ -157,11 +153,11 @@ License: creative commons CC-BY-NC-SA
 
   <view name="video, basic, detailed">
     <textlist name="gamelist">
-      <selectorColor>0f85a5</selectorColor>
-      <selectorColorEnd>0F6585</selectorColorEnd>
-      <selectedColor>ffffff</selectedColor>
-      <primaryColor>ffffff</primaryColor>
-      <secondaryColor>ffffff</secondaryColor>
+      <selectorColor>291747</selectorColor>
+      <selectorColorEnd>1B1038</selectorColorEnd>
+      <selectedColor>7DF9FF</selectedColor>
+      <primaryColor>F5EFFF</primaryColor>
+      <secondaryColor>C1B3DC</secondaryColor>
       <fontPath>./assets/SST.ttf</fontPath>
       <fontSize>0.03</fontSize>
       <pos>0.051 0.170</pos>
@@ -184,6 +180,20 @@ License: creative commons CC-BY-NC-SA
       <fontSize>0.025</fontSize>
       <fontPath>./assets/noto.ttf</fontPath>
     </text>
+  </view>
+
+  <!-- Static artwork in the default/detail and grid views avoids video decoding. -->
+  <view name="detailed, grid">
+    <image name="md_image">
+      <origin>0.5 0.5</origin>
+      <pos>0.776 0.388</pos>
+      <maxSize>0.347 0.46</maxSize>
+      <default>./assets/no_boxart.png</default>
+    </image>
+  </view>
+
+  <!-- The standard video view remains available when explicitly selected. -->
+  <view name="video">
     <video name="md_video">
       <origin>0.5 0.5</origin>
       <pos>0.776 0.388</pos>
@@ -240,9 +250,7 @@ License: creative commons CC-BY-NC-SA
     <rating name="md_rating">
       <visible>true</visible>
       <pos>0.71 0.57</pos>
-      <alignment>center</alignment>
       <color>ffffff</color>
-      <maxsize>0.15 0.10</maxsize>
       <unfilledColor>808080</unfilledColor>
       <unfilledPath>:/star_filled.svg</unfilledPath>
     </rating>
@@ -263,23 +271,19 @@ License: creative commons CC-BY-NC-SA
     <text name="md_playcount"       pos="0.800 0.275"/>
     <text name="md_lbl_players"     pos="0.600 0.300"/>
     <text name="md_players"         pos="0.800 0.300"/>
-    <video name="md_video">
+    <image name="md_image">
       <origin>0.5 0</origin>
       <maxSize>0.347 0.183</maxSize>
-    </video>
+    </image>
   </view>
 
   <view name="grid">
-    <image name="md_image">
-      <visible>false</visible>
-    </image>
     <text name="md_name">
       <color>ffffffff</color>
       <pos>0.051 0.16</pos>
       <size>0.50 0.07</size>
       <alignment>center</alignment>
-      <glowColor>00000005</glowColor>
-      <glowSize>3</glowSize>
+      <glowSize>0</glowSize>
     </text>
     <imagegrid name="gamegrid">
       <pos>0.047 0.200</pos>
@@ -299,7 +303,7 @@ License: creative commons CC-BY-NC-SA
       <selectionMode>image</selectionMode>
       <padding>5 5</padding>
       <imageColor>FFFFFF90</imageColor>
-      <reflexion>0.24 0.0</reflexion>
+      <reflexion>0 0</reflexion>
     </gridtile>
     <gridtile name="selected">
       <backgroundColor>FFFFFF00</backgroundColor>
@@ -325,13 +329,79 @@ License: creative commons CC-BY-NC-SA
     </image>
   </view>
 
-  <!-- Assets for different background -->
-  <subset name="background">
-    <include name="default"/>
-    <include name="Earth">./assets/bg2.xml</include>
-    <include name="Abstract">./assets/bg4.xml</include>
-    <include name="Vinyl">./assets/bg1.xml</include>
-    <include name="Lakeview">./assets/bg3.xml</include>
-    <include name="SimpleLife">./assets/bg5.xml</include>
-  </subset>
+  <!-- Shared static branding. Pixelify Sans and mascot are reused from RetroCow/Pegasus. -->
+  <view name="system, basic, detailed, video, grid">
+    <image name="retrocow_mascot" extra="true">
+      <path>./assets/branding/retrocow-mascot.png</path>
+      <pos>0.565 0.02</pos>
+      <maxSize>0.055 0.065</maxSize>
+      <origin>0 0</origin>
+      <linearSmooth>false</linearSmooth>
+      <zIndex>100</zIndex>
+    </image>
+    <text name="retrocow_name" extra="true">
+      <text>RetroCow</text>
+      <fontPath>./assets/fonts/pixelify/pixelify.ttf</fontPath>
+      <fontSize>0.045</fontSize>
+      <color>FF71CE</color>
+      <pos>0.625 0.025</pos>
+      <size>0.19 0.055</size>
+      <verticalAlignment>center</verticalAlignment>
+      <zIndex>100</zIndex>
+    </text>
+    <text name="retrocow_credits" extra="true">
+      <text>Minimal: lilbud / crcerror | RetroCow: Varghh</text>
+      <fontPath>./assets/SST.ttf</fontPath>
+      <fontSize>0.018</fontSize>
+      <color>C1B3DC</color>
+      <pos>0.02 0.91</pos>
+      <size>0.75 0.025</size>
+      <zIndex>100</zIndex>
+    </text>
+  </view>
+  <view name="system">
+    <image name="retrocow_mascot" extra="true">
+      <pos>0.35 0.16</pos>
+      <maxSize>0.09 0.13</maxSize>
+    </image>
+    <text name="retrocow_name" extra="true">
+      <pos>0.45 0.175</pos>
+      <size>0.3 0.1</size>
+      <fontSize>0.08</fontSize>
+    </text>
+  </view>
+
+  <!-- Batocera automatically enlarges fonts below 720p. Keep fixed boxes readable. -->
+  <view name="system" if="${screen.height} &lt; 720">
+    <text name="retrocow_name" extra="true">
+      <fontSize>0.06</fontSize>
+      <size>0.36 0.1</size>
+    </text>
+  </view>
+  <view name="basic, detailed, video, grid" if="${screen.height} &lt; 720">
+    <text name="retrocow_name" extra="true">
+      <fontSize>0.034</fontSize>
+    </text>
+  </view>
+  <view name="detailed" if="${screen.height} &lt; 720">
+    <text name="md_players, md_genre, md_developer, md_publisher, md_playcount, md_gametime, md_lbl_players, md_lbl_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_lbl_lastplayed, md_lbl_playcount, md_lbl_releasedate, md_lbl_gametime">
+      <fontSize>0.017</fontSize>
+    </text>
+    <datetime name="md_lastplayed, md_releasedate">
+      <fontSize>0.017</fontSize>
+    </datetime>
+  </view>
+  <view name="system, basic, detailed, video, grid" if="${screen.height} &lt; 720">
+    <helpsystem name="help">
+      <fontSize>0.018</fontSize>
+    </helpsystem>
+  </view>
+  <view name="screen" if="${screen.height} &lt; 720">
+    <text name="clock">
+      <fontSize>0.022</fontSize>
+    </text>
+  </view>
+
+  <!-- Abstract is unconditional: old saved subset choices cannot select another style. -->
+  <include>./assets/bg4.xml</include>
 </theme>
