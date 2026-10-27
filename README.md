@@ -1,3 +1,49 @@
+# RetroCow para Batocera
+
+Adaptación personal y liviana de **Minimal**, con Abstract como única apariencia y la identidad vaporwave de RetroCow para Pegasus.
+
+**El tema original es obra de [lilbud](https://github.com/lilbud/es-theme-minimal), con el mantenimiento y las adaptaciones de [crcerror](https://github.com/crcerror/es-theme-minimal) y sus colaboradores.** Varghh es un aficionado que hace proyectos personales por hobby con ayuda de IA (vibecoding); su aporte aquí es la adaptación RetroCow. Todos los créditos, enlaces y condiciones originales se conservan abajo y en [CREDITS.md](CREDITS.md).
+
+## Qué cambia
+
+- **Solo Abstract:** se carga directamente, sin selector de fondos, estilos ni paletas. Una preferencia guardada de otra variante no puede cambiarlo. Las opciones generales de Batocera, como vista de lista o grilla, siguen siendo propias del frontend.
+- Fondo Abstract adaptado a violetas, rosa y cian de RetroCow; PNG indexado de **1280×720**, reutilizado por todas las vistas. Se aplica un tinte neutro oscuro para facilitar la lectura.
+- Mascota estática **256×229** y nombre **RetroCow** con la misma **Pixelify Sans** de Pegasus. Se mantienen las fuentes originales para listas, metadatos y menús.
+- Colores de menús, marcos, selección e indicadores armonizados con RetroCow. Atribución visible a Minimal/lilbud/crcerror.
+- Vista **detailed** por defecto y **grid** con carátula estática, sin componente de video. La vista estándar **video** conserva los videos para quien la seleccione expresamente; **basic** conserva su comportamiento original.
+- Se desactivan reflejos del carrusel y de las carátulas y el brillo del título de la grilla. No se añaden animaciones, shaders, scripts, servicios ni dependencias de ejecución.
+- Se retiran los cinco fondos alternativos y sus XML. Se conservan **los 130 recursos de sistemas sin cambios**, junto con el diseño, las posiciones de la lista y las funciones principales de Minimal.
+- Ajustes automáticos de tipografía por debajo de 720 píxeles de alto para que el nombre, reloj y metadatos no se recorten por la ampliación de fuentes de Batocera. Comprobado visualmente a 800×600 y 1280×720 con el frontend de escritorio; detalles y límites en [VALIDATION.md](VALIDATION.md).
+
+## Instalación y prueba
+
+1. Copiar el contenido de este repositorio a `/userdata/themes/es-theme-retrocow/`, con `theme.xml` en la raíz de esa carpeta.
+2. Reiniciar EmulationStation o recargar los temas y seleccionar **es-theme-retrocow** en los ajustes de interfaz de Batocera.
+3. Empezar con la vista **detailed** o **basic** en equipos modestos. Si había una vista de video guardada por sistema, cambiarla manualmente; el tema no sobrescribe las preferencias generales de Batocera.
+4. Revisar [VALIDATION.md](VALIDATION.md) y completar allí las pruebas en el equipo real antes de integrar el PR.
+
+El tema no cambia resolución, VRAM, emuladores ni ajustes del sistema. La reducción de tamaño de los archivos y de las dimensiones del fondo es verificable; **no equivale a una medición de FPS o RAM en tu equipo**. Los videos seleccionados expresamente, las imágenes de la biblioteca y las transiciones configuradas en Batocera siguen influyendo en el consumo.
+
+## Paleta
+
+| Uso | Color |
+| --- | --- |
+| Base oscura / panel | `#0a0026` / `#1b1038` |
+| Panel alternativo / borde | `#291747` / `#553ea8` |
+| Nombre y acento rosa | `#ff71ce` |
+| Selección / cian | `#7df9ff` |
+| Texto principal / secundario | `#f5efff` / `#c1b3dc` |
+
+El fondo raster contiene una adaptación de estos tonos; los colores de la interfaz se definen exactamente en el XML. La mascota y la fuente se reutilizan sin cambios del [proyecto RetroCow/Pegasus](https://github.com/Varghh/RetroCow-Amberline-).
+
+## Créditos, licencia e historial
+
+Se mantienen los avisos **Creative Commons CC-BY-NC-SA** del tema original, que no especifican versión; Pixelify Sans conserva su **SIL OFL 1.1** incluida. Ver [CREDITS.md](CREDITS.md) para autores, recursos y enlaces.
+
+**El README original de crcerror se conserva íntegro a continuación.** Sus instrucciones sobre otras variantes, previews y la referencia histórica a 40 MB de VRAM describen Minimal; no son instrucciones actuales ni resultados de rendimiento medidos para RetroCow. Base: `7a9e5c50392015c50e233b66a1bda7a7916fcd52`.
+
+---
+
 # es-theme-minimal
 
 **Words from the creator [lilbud](https://github.com/lilbud)**
