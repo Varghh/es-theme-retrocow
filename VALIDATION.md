@@ -37,6 +37,15 @@ Esto valida carga y presentación en ese frontend de escritorio. **No valida ren
 - Se retiró `extra="true"` del fondo estándar en ambos XML: EmulationStation ya crea ese componente y el atributo provocaba otro fondo de pantalla completa. Se mantiene Abstract con la misma ruta, tinte y posición. No se alteraron las imágenes ni las fuentes durante esta revisión.
 - El README explica la descarga de `master` **después del merge**, la extracción y el nombre final de la carpeta, y destaca la autoría original de lilbud, crcerror y colaboradores. Su texto histórico permanece íntegro.
 
+## Ajuste posterior: marca fija y grilla 3×3
+
+- La selección de consolas usa `extra="static"` para la mascota, el nombre RetroCow y los créditos. Batocera los dibuja sin el desplazamiento de los extras del carrusel. El override de tipografía para pantallas menores a 720p mantiene ese atributo.
+- `defaultView="grid"` y `autoLayout` de `3 3` establecen tres columnas y tres filas cuando la vista y el tamaño de grilla del frontend están en Automático. Una preferencia global o por sistema guardada tiene prioridad; el README explica cómo volver a los valores del tema.
+- Se desactiva el centrado de la selección para mostrar las nueve casillas desde el inicio y se reduce el aumento de la carátula seleccionada de 1,40 a 1,10. El margen horizontal se expresa mediante posición y ancho del componente, evitando que asome una cuarta columna en el área de padding. Se conserva el desplazamiento horizontal y no se añaden animaciones ni videos.
+- Prueba con el mismo frontend de escritorio v42 a **1280×720 y 800×600**, vista Automático, transición slide y doce juegos ficticios: apertura automática de la grilla, nueve casillas, navegación, menú y retorno al selector. Las carátulas usan la mascota únicamente como recurso de prueba.
+- Comparación de la zona de marca entre cuadros anteriores, intermedios y posteriores al cambio de consola: idéntica píxel por píxel en ambas resoluciones mientras cambia el carrusel. Sin errores de análisis ni propiedades desconocidas en los logs.
+- Los recursos gráficos, fuentes, licencias y atribuciones originales no cambian. La prueba de estos ajustes con mandos y hardware real queda a cargo del usuario después del merge manual.
+
 ## Tamaño y rendimiento
 
 El contenido original versionado ocupa **7.233.980 bytes** (sin `.git`). La adaptación ocupa aproximadamente **2,67 MB**, documentación incluida: alrededor de **63 % menos**. Esto mide archivos distribuidos, no RAM ni FPS.

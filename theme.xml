@@ -7,7 +7,7 @@ Updated: On 14.02.2026
 License: creative commons CC-BY-NC-SA
 RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDITS.md
 -->
-<theme defaultView="detailed">
+<theme defaultView="grid">
   <formatVersion>7</formatVersion>
   <view name="screen">
     <text name="clock">
@@ -182,7 +182,7 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
     </text>
   </view>
 
-  <!-- Static artwork in the default/detail and grid views avoids video decoding. -->
+  <!-- Static artwork in the detailed and default/grid views avoids video decoding. -->
   <view name="detailed, grid">
     <image name="md_image">
       <origin>0.5 0.5</origin>
@@ -286,16 +286,15 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
       <glowSize>0</glowSize>
     </text>
     <imagegrid name="gamegrid">
-      <pos>0.047 0.200</pos>
-      <size>0.51 0.67</size>
+      <pos>0.077 0.200</pos>
+      <size>0.45 0.67</size>
       <margin>0.005 0.010</margin>
-      <padding>0.03 0.05 0.03 0.04</padding>
-      <autoLayout>3 1</autoLayout>
-      <autoLayoutSelectedZoom>1.40</autoLayoutSelectedZoom>
+      <padding>0 0.05 0 0.04</padding>
+      <autoLayout>3 3</autoLayout>
+      <autoLayoutSelectedZoom>1.10</autoLayoutSelectedZoom>
       <animateSelection>false</animateSelection>
       <scrollDirection>horizontal</scrollDirection>
-      <centerSelection>true</centerSelection>
-      <scrollLoop>true</scrollLoop>
+      <centerSelection>false</centerSelection>
     </imagegrid>
     <gridtile name="default">
       <backgroundColor>FFFFFF00</backgroundColor>
@@ -359,21 +358,23 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
       <zIndex>100</zIndex>
     </text>
   </view>
+  <!-- Keep common branding fixed while the system carousel slides. -->
   <view name="system">
-    <image name="retrocow_mascot" extra="true">
+    <image name="retrocow_mascot" extra="static">
       <pos>0.35 0.16</pos>
       <maxSize>0.09 0.13</maxSize>
     </image>
-    <text name="retrocow_name" extra="true">
+    <text name="retrocow_name" extra="static">
       <pos>0.45 0.175</pos>
       <size>0.3 0.1</size>
       <fontSize>0.08</fontSize>
     </text>
+    <text name="retrocow_credits" extra="static" />
   </view>
 
   <!-- Batocera automatically enlarges fonts below 720p. Keep fixed boxes readable. -->
   <view name="system" if="${screen.height} &lt; 720">
-    <text name="retrocow_name" extra="true">
+    <text name="retrocow_name" extra="static">
       <fontSize>0.06</fontSize>
       <size>0.36 0.1</size>
     </text>
