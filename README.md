@@ -20,9 +20,9 @@ El README original se conserva **íntegro** al final de este archivo, con sus en
 
 - **Solo Abstract:** se carga directamente, sin selector de fondos, estilos ni paletas. Una preferencia guardada de otra variante no puede cambiarlo. Las opciones generales de Batocera, como vista de lista o grilla, siguen siendo propias del frontend.
 - Fondo Abstract adaptado a violetas, rosa y cian de RetroCow; PNG indexado de **1280×720**, reutilizado por todas las vistas. Se aplica un tinte neutro oscuro para facilitar la lectura.
-- Mascota estática **256×229** y nombre **RetroCow** con la misma **Pixelify Sans** de Pegasus. Se mantienen las fuentes originales para listas, metadatos y menús.
+- Mascota estática **256×229** y nombre **RetroCow** con la misma **Pixelify Sans** de Pegasus. En la selección de consolas, mascota, nombre y créditos permanecen fijos durante el desplazamiento del carrusel. Se mantienen las fuentes originales para listas, metadatos y menús.
 - Colores de menús, marcos, selección e indicadores armonizados con RetroCow. Atribución visible a Minimal/lilbud/crcerror.
-- Vista **detailed** por defecto y **grid** con carátula estática, sin componente de video. La vista estándar **video** conserva los videos para quien la seleccione expresamente; **basic** conserva su comportamiento original.
+- Vista **grid de 3 columnas × 3 filas** por defecto, con carátulas estáticas. **Detailed** también usa carátula estática, sin componente de video. La vista estándar **video** conserva los videos para quien la seleccione expresamente; **basic** conserva su comportamiento original.
 - Se desactivan reflejos del carrusel y de las carátulas y el brillo del título de la grilla. No se añaden animaciones, shaders, scripts, servicios ni dependencias de ejecución.
 - Se retiran los cinco fondos alternativos y sus XML. Se conservan **los 130 recursos de sistemas sin cambios**, junto con el diseño, las posiciones de la lista y las funciones principales de Minimal.
 - Ajustes automáticos de tipografía por debajo de 720 píxeles de alto para que el nombre, reloj y metadatos no se recorten por la ampliación de fuentes de Batocera. Comprobado visualmente a 800×600 y 1280×720 con el frontend de escritorio; detalles y límites en [VALIDATION.md](VALIDATION.md).
@@ -35,7 +35,7 @@ El README original se conserva **íntegro** al final de este archivo, con sus en
 2. Extraer el ZIP y renombrar la carpeta `es-theme-retrocow-master` a **`es-theme-retrocow`**.
 3. Copiar esa carpeta completa a **`/userdata/themes/`** en Batocera. El resultado debe ser **`/userdata/themes/es-theme-retrocow/theme.xml`**: sin otra carpeta intermedia y sin dejar el ZIP comprimido dentro de `themes`.
 4. Reiniciar EmulationStation y seleccionar **es-theme-retrocow** en los ajustes de interfaz de Batocera. Abstract ya viene fijo; no hay que elegir una configuración adicional.
-5. Empezar con la vista **detailed** o **basic** en equipos modestos. Si había una vista de video guardada por sistema, cambiarla manualmente; el tema conserva las preferencias generales de Batocera. Completar las pruebas de [VALIDATION.md](VALIDATION.md) en el equipo real.
+5. Con el estilo de lista en **Automático** y el tamaño de grilla en **Automático**, el tema abre los juegos en **grid 3×3**. Si Batocera conserva otra vista o tamaño global o por sistema, volver esos ajustes a **Automático** para usar los valores del tema (o elegir explícitamente **Grid** y **3×3**). Los nombres del menú pueden variar según versión e idioma. **Detailed**, **basic** y **video** siguen disponibles. Completar las pruebas de [VALIDATION.md](VALIDATION.md) en el equipo real.
 
 Estos archivos deben viajar juntos dentro de la misma carpeta:
 
