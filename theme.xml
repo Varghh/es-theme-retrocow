@@ -328,26 +328,16 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
     </image>
   </view>
 
-  <!-- Shared static branding. Pixelify Sans and mascot are reused from RetroCow/Pegasus. -->
+  <!-- Official combined logo shared with RetroCow/Pegasus. -->
   <view name="system, basic, detailed, video, grid">
-    <image name="retrocow_mascot" extra="true">
-      <path>./assets/branding/retrocow-mascot.png</path>
-      <pos>0.565 0.02</pos>
-      <maxSize>0.055 0.065</maxSize>
+    <image name="retrocow_logo" extra="true">
+      <path>./assets/branding/retrocow-logo.png</path>
+      <pos>0.565 0.005</pos>
+      <maxSize>0.29 0.08</maxSize>
       <origin>0 0</origin>
       <linearSmooth>false</linearSmooth>
       <zIndex>100</zIndex>
     </image>
-    <text name="retrocow_name" extra="true">
-      <text>RetroCow</text>
-      <fontPath>./assets/fonts/pixelify/pixelify.ttf</fontPath>
-      <fontSize>0.045</fontSize>
-      <color>FF71CE</color>
-      <pos>0.625 0.025</pos>
-      <size>0.19 0.055</size>
-      <verticalAlignment>center</verticalAlignment>
-      <zIndex>100</zIndex>
-    </text>
     <text name="retrocow_credits" extra="true">
       <text>Minimal: lilbud / crcerror | RetroCow: Varghh</text>
       <fontPath>./assets/SST.ttf</fontPath>
@@ -360,30 +350,15 @@ RetroCow adaptation: Varghh, 2026. Original credits and links: README.md / CREDI
   </view>
   <!-- Keep common branding fixed while the system carousel slides. -->
   <view name="system">
-    <image name="retrocow_mascot" extra="static">
-      <pos>0.35 0.16</pos>
-      <maxSize>0.09 0.13</maxSize>
+    <image name="retrocow_logo" extra="static">
+      <pos>0.5 0.15</pos>
+      <origin>0.5 0</origin>
+      <maxSize>0.44 0.19</maxSize>
     </image>
-    <text name="retrocow_name" extra="static">
-      <pos>0.45 0.175</pos>
-      <size>0.3 0.1</size>
-      <fontSize>0.08</fontSize>
-    </text>
     <text name="retrocow_credits" extra="static" />
   </view>
 
   <!-- Batocera automatically enlarges fonts below 720p. Keep fixed boxes readable. -->
-  <view name="system" if="${screen.height} &lt; 720">
-    <text name="retrocow_name" extra="static">
-      <fontSize>0.06</fontSize>
-      <size>0.36 0.1</size>
-    </text>
-  </view>
-  <view name="basic, detailed, video, grid" if="${screen.height} &lt; 720">
-    <text name="retrocow_name" extra="true">
-      <fontSize>0.034</fontSize>
-    </text>
-  </view>
   <view name="detailed" if="${screen.height} &lt; 720">
     <text name="md_players, md_genre, md_developer, md_publisher, md_playcount, md_gametime, md_lbl_players, md_lbl_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_lbl_lastplayed, md_lbl_playcount, md_lbl_releasedate, md_lbl_gametime">
       <fontSize>0.017</fontSize>

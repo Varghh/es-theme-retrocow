@@ -1,3 +1,11 @@
+## Identidad oficial RetroCow
+
+![Logotipo y mascota oficiales](assets/branding/retrocow-logo.png)
+
+El logotipo unido a la vaca con lentes es la identidad oficial definitiva de RetroCow, compartida por Pegasus, EmulationStation y como referencia para el futuro Launcher. `assets/branding/retrocow-master.png` conserva exactamente el PNG proporcionado, sin alteraciones. `retrocow-logo.png` es una copia reducida proporcionalmente a 1024 píxeles de ancho, con transparencia y sin recolorear, redibujar ni separar texto y mascota. El maestro no se carga durante la navegación.
+
+RetroCow es una personalización visual: la autoría de Amberline (Pegasus) y Minimal (EmulationStation) corresponde a sus desarrolladores originales, acreditados abajo. Se conservan sus licencias y atribuciones. Los recursos anteriores permanecen como referencia histórica, pero el encabezado utiliza la nueva identidad.
+
 # RetroCow para Batocera
 
 Adaptación personal y liviana de **Minimal**, con Abstract como única apariencia y la identidad vaporwave de RetroCow para Pegasus.
